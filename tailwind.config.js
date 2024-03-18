@@ -14,9 +14,12 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-      },
+      },      
     },
     extend: {
+      fontFamily: {
+        tourney: ["'Tourney Variable'"]
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
