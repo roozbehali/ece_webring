@@ -4,4 +4,4 @@ This is an update on the old Waterloo ECE webring, that is now deprecated and un
 2. You have made changes _only_ in the above file / folder.
 
 Once we've reviewed your PR, you will appear on the site :)
-We hope to maintain this webring as well as the SE webring is maintained, s/o [@simcard0000](https://github.com/simcard0000).
+We hope to maintain this as well as the SE webring is maintained, s/o [@simcard0000](https://github.com/simcard0000) 🚀
