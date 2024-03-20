@@ -15,24 +15,24 @@ export default function handler(req, res) {
 /**
  * @type {Person}
  */
-const members = [
+export const members = [
     {
         name: "Yash Karthik",
         cohort: "Computer",
         year: 2028,
-        siteURL: "www.yashkarthik.xyz"
+        siteURL: "https://www.yashkarthik.xyz"
     },
     {
         name: "Roozbeh Ali",
         cohort: "Computer",
         year: 2028,
-        siteURL: "www.roozbehali.com"
+        siteURL: "https://www.roozbehali.com"
     },
     {
         name: "Sunnie Kapar",
         cohort: "Computer",
         year: 2028,
-        siteURL: "www.sunniekapar.com"
+        siteURL: "https://www.sunniekapar.com"
     }
 ]
 
