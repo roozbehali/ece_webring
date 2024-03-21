@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* scrollbar delete */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
  
 @layer base {
   :root {

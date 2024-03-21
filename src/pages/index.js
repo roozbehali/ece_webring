@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import image from "@/components/ui/image";
 import Search from "@/components/ui/search";
+import Head from 'next/head'
 import '@fontsource-variable/tourney';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -9,6 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className="min-h-screen min-w-screen bg-neutral-800 flex flex-col items-start">
+      <Head>
+        <title>ECE Webring</title>
+        <link rel="shortcut icon" href="/ece.ico"></link>
+      </Head>
 
         {/* header */}
         <nav className="flex flex-row justify-start p-5 pb-10">
@@ -31,6 +34,5 @@ export default function Home() {
         </div>
 
       </div>
-
   );
 }

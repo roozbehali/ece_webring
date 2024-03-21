@@ -33,7 +33,29 @@ export const members = [
         cohort: "Computer",
         year: 2028,
         siteURL: "https://www.sunniekapar.com"
-    }
+    },
+    {
+        name: "Bereket Semagn",
+        cohort: "Tunnel",
+        year: 2032,
+        siteURL: "https://www.bereket.wtf"
+    },
+    {
+        name: "Ankur Boyed",
+        cohort: "Software",
+        year: 2029,
+        siteURL: "https://www.ankurboyed.com"
+    },
+    {
+        name: "Steven Gong",
+        cohort: "Software",
+        year: 2026,
+        siteURL: "https://stevengong.co"
+    },
+    {
+        name: "Akshay Satish",
+        cohort: "Computer",
+        year: 2028,
+        siteURL: "https://akshaysatish.com"
+    },
 ]
-
-console.log(members);
