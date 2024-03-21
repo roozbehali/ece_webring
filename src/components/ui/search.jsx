@@ -44,7 +44,7 @@ const Search = () => {
         return (
           <div class="w-full grid grid-cols-12 gap-5 py-2">
             <div class="col-span-1 flex items-start justify-center font-black text-lg text-white">.</div>
-            <div class="flex items-center justify-start py-2 px-4 col-span-11 font-mono text-white text-sm border-dotted border-2 border-neutral-600 hover:bg-neutral-900 hover:cursor-crosshair">{member.item.name} |&nbsp;
+            <div class="flex items-center justify-start py-2 px-4 col-span-11 font-mono text-white text-sm border-dotted border-2 border-neutral-600 hover:bg-neutral-800 hover:cursor-crosshair">{member.item.name} |&nbsp;
               <div key={member.item.name} class="text-indigo-400 underline hover:text-indigo-500">
                 <a href={member.item.siteURL} target="_blank">{member.item.siteURL}</a>
               </div>
