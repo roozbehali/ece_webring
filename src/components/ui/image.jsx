@@ -24,7 +24,7 @@ import { useState, useEffect } from 'react'
 
 const image = () => {
   return (
-    <div class="box-border border-2 md:box-content">
+    <div class=" border-2 md:box-content">
       <pre>{currDisplay}</pre>
     </div>
   )

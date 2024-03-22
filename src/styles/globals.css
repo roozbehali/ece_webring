@@ -81,3 +81,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  ul {
+    --mask: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,   /* Start fully transparent */
+        rgba(0,0,0,1) 0%,  /* Transition to fully opaque */
+        rgba(0,0,0,1) 70%,  /* Stay opaque */
+        rgba(0,0,0,0) 100%  /* End fully transparent */
+    );
+    
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+  }
+}
