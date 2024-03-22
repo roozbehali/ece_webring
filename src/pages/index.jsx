@@ -19,14 +19,14 @@ export default function Home() {
           </p>
         </nav>
 
-        <main className="grid w-full h-full lg:grid-cols-2">
+        <main className="grid w-full h-full !mt-36 lg:grid-cols-2">
           <Search />
           <div className="flex items-center justify-center p-8 text-white rounded-lg">
             <p>wip</p>
           </div>
         </main>
 
-        <footer className="fixed flex items-center justify-center w-full h-10 font-mono bottom-4 text-neutral-300">
+        <footer className="fixed flex items-center justify-center h-10 max-w-full font-mono bottom-4 text-neutral-300">
           <p>
             Made in&nbsp;
             <a

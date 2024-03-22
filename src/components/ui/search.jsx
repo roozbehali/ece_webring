@@ -30,34 +30,40 @@ const Search = () => {
 
   return (
     // wrapper div
-    <section className="w-full h-full space-y-4">
+    <section className="grid justify-center w-full h-full space-y-4">
       {/* search bar */}
-      <div className="flex items-stretch font-mono text-lg text-secondary">
-        <span className="px-4 py-2 bg-black">grep&gt;</span>
+      <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary">
         <Input
-          className="max-w-[400px] placeholder-black"
+          className="h-full peer"
           type="text"
           placeholder="filter by name, year, site ..."
           onChange={handleKeyDown}
         />
+        <span className="px-4 py-2 transition duration-300 bg-black text-zinc-700 peer-focus-within:text-yellow-500">
+          grep&gt;
+        </span>
       </div>
 
       {/* search results */}
-      <ul className="pl-24 space-y-2 overflow-y-scroll list-disc text-zinc-50 h-[400px]">
+      <ul className="pl-6 space-y-2 overflow-y-scroll text-zinc-50 h-[400px]">
         {currMemberState.map((member, index) => {
           return (
-            <li
-              key={index}
-              className="px-4 py-2 font-mono border-2 border-dotted border-zinc-700 hover:bg-zinc-900 hover:cursor-crosshair max-w-[600px]"
-            >
-              {member.item.name} |&nbsp;
-              <span className="text-orange-500 underline hover:text-yellow-600/40">
-                <a href={member.item.siteURL} target="_blank">
-                  {member.item.siteURL}
-                </a>
-              </span>
-              &nbsp;| {member.item.year}
-            </li>
+            <div key={index} className="flex items-center">
+              <span className="pr-8 text-yellow-500">&gt;</span>
+
+              <li
+                key={index}
+                className="px-6 py-2.5 font-mono border-2 border-dotted border-zinc-700 hover:bg-zinc-900 hover:cursor-crosshair w-full"
+              >
+                {member.item.name} |&nbsp;
+                <span className="text-yellow-500 underline hover:text-yellow-600/40">
+                  <a href={member.item.siteURL} target="_blank">
+                    {member.item.siteURL}
+                  </a>
+                </span>
+                &nbsp;| {member.item.year}
+              </li>
+            </div>
           );
         })}
       </ul>
