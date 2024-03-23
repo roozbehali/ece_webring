@@ -30,7 +30,7 @@ const Search = () => {
 
   return (
     // wrapper div
-    <section className="grid justify-center w-full h-full space-y-4">
+    <section className="grid max-w-[600px] h-full space-y-4">
       {/* search bar */}
       <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary">
         <Input

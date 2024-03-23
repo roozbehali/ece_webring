@@ -2,6 +2,7 @@ import { Source_Code_Pro } from 'next/font/google';
 import Search from '@/components/ui/search';
 import Head from 'next/head';
 import '@fontsource-variable/tourney';
+import Navbar from '@/components/layouts/Navbar';
 
 const source_code_pro = Source_Code_Pro({ subsets: ['latin'] });
 
@@ -13,11 +14,7 @@ export default function Home() {
           <title>ECE Webring</title>
           <link rel="shortcut icon" href="/ece.ico"></link>
         </Head>
-        <nav className="flex flex-row justify-start">
-          <p className="text-3xl font-bold text-white font-tourney">
-            ECE Webring
-          </p>
-        </nav>
+        <Navbar />
 
         <main className="grid w-full h-full !mt-36 lg:grid-cols-2">
           <Search />
