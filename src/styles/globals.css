@@ -95,4 +95,8 @@
     -webkit-mask: var(--mask); 
     mask: var(--mask);
   }
+
+  ::selection {
+    background-color: grey;
+  }
 }
