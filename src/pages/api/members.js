@@ -58,4 +58,16 @@ export const members = [
     year: 2028,
     siteURL: 'https://akshaysatish.com',
   },
+  {
+    name: 'Moglai Bingleson',
+    cohort: 'Computer',
+    year: 2028,
+    siteURL: 'https://awwwards.com',
+  },
+  {
+    name: 'Hywaygo Johnson the IV',
+    cohort: 'Computer',
+    year: 2028,
+    siteURL: 'https://google.com',
+  },
 ];

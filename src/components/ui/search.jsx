@@ -39,13 +39,13 @@ const Search = () => {
           placeholder="filter by name, year, site ..."
           onChange={handleKeyDown}
         />
-        <span className="px-4 py-2 transition duration-300 bg-black text-zinc-700 peer-focus-within:text-yellow-500">
+        <span className="px-4 py-2 transition duration-300 bg-black text-stone-700 peer-focus-within:text-yellow-500">
           grep&gt;
         </span>
       </div>
 
       {/* search results */}
-      <ul className="pl-6 space-y-2 overflow-y-scroll text-zinc-50 h-[400px]">
+      <ul className="pl-6 space-y-2 overflow-y-scroll text-stone-50 h-[400px]">
         {currMemberState.map((member, index) => {
           return (
             <div key={index} className="flex items-center">
@@ -53,7 +53,7 @@ const Search = () => {
 
               <li
                 key={index}
-                className="px-6 py-2.5 font-mono border-2 border-dotted border-zinc-700 hover:bg-zinc-900 hover:cursor-crosshair w-full"
+                className="px-6 py-2.5 font-mono border-2 border-dotted border-stone-600 hover:bg-stone-800 hover:cursor-crosshair w-full"
               >
                 {member.item.name} |&nbsp;
                 <span className="text-yellow-500 underline hover:text-yellow-600/40">

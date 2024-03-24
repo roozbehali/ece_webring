@@ -22,12 +22,12 @@ import { useState, useEffect } from 'react'
 //   }, [])
 // }
 
-const image = () => {
+const Image = () => {
   return (
-    <div class=" border-2 md:box-content">
-      <pre>{currDisplay}</pre>
+    <div className="flex items-center justify-center p-8 text-white border-4 border-dotted border-stone-600 rounded-lg">
+      <p>wip</p>
     </div>
   )
 }
 
-export default image
+export default Image
