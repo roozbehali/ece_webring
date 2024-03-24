@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { members } from '@/pages/api/members';
 import Fuse from 'fuse.js';
+import { useMember } from '@/context/MemberContext';
 
 const Search = () => {
   // Fuse.js for search
@@ -28,11 +29,14 @@ const Search = () => {
     // }
   };
 
+  const { setMemberItem } = useMember();
+
+
   return (
     // wrapper div
     <section className="grid max-w-[600px] h-full space-y-4">
       {/* search bar */}
-      <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary">
+      <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px]">
         <Input
           className="h-full peer"
           type="text"
@@ -45,23 +49,27 @@ const Search = () => {
       </div>
 
       {/* search results */}
-      <ul className="pl-6 space-y-2 overflow-y-scroll text-stone-50 h-[400px]">
+      <ul className="pl-6 space-y-2 overflow-y-scroll text-white h-[400px]">
         {currMemberState.map((member, index) => {
           return (
             <div key={index} className="flex items-center">
               <span className="pr-8 text-yellow-500">&gt;</span>
 
               <li
+                onPointerOver={() => setMemberItem(member.item)}
                 key={index}
-                className="px-6 py-2.5 font-mono border-2 border-dotted border-stone-600 hover:bg-stone-800 hover:cursor-crosshair w-full"
+                className="px-6 py-2.5 font-mono text-sm border-2 border-dotted border-stone-600 hover:bg-stone-800 hover:cursor-crosshair w-full truncate"
               >
-                {member.item.name} |&nbsp;
-                <span className="text-yellow-500 underline hover:text-yellow-600/40">
+                <span className={member.item.legacy ? 'text-yellow-700' : ''}>
+                  {member.item.name}
+                </span>
+                &nbsp;|&nbsp;
+                <span className="text-yellow-500 underline transition duration-200 hover:text-yellow-600/40">
                   <a href={member.item.siteURL} target="_blank">
                     {member.item.siteURL}
                   </a>
                 </span>
-                &nbsp;| {member.item.year}
+                &nbsp;{!member.item.legacy ? '|' : ''} {member.item.year}
               </li>
             </div>
           );

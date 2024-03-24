@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         tourney: ["'Tourney Variable'"]
       },
+      fontSize: {
+        clamp: 'clamp(1px, 1vh, 3px)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -17,20 +17,20 @@ export default function Home() {
         </Head>
         <Navbar />
 
-        <main className="grid w-full h-full !mt-18 lg:grid-cols-2">
+        <main className="grid w-full h-full !mt-18 lg:grid-cols-2 gap-8">
           <Search />
           <Image />
         </main>
 
         {/* Centered vs. left aligned */}
-        {/* <footer className="absolute bottom-0 left-0 flex items-center justify-center h-10 w-full font-mono bottom-4 text-neutral-300"> */}
-        <footer className="absolute flex items-center justify-center h-10 font-mono bottom-4 text-neutral-300">
+        {/* <footer className="absolute bottom-0 left-0 flex items-center justify-center w-full h-10 font-mono bottom-4 text-neutral-300"> */}
+        <footer className="absolute flex items-center justify-center h-10 font-mono text-white bottom-4">
           <p>
             Made in&nbsp;
             <a
               href="https://github.com/roozbehali/ece_webring/pulls"
               target="_blank"
-              className="text-yellow-500 hover:text-yellow-700"
+              className="text-yellow-500 transition duration-200 hover:text-yellow-700"
             >
               Waterloo.
             </a>
