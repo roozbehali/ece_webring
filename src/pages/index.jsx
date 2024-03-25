@@ -1,6 +1,6 @@
 import { Source_Code_Pro } from 'next/font/google';
-import Search from '@/components/ui/search';
-import Image from '@/components/ui/image';
+import Search from '@/components/layouts/Search';
+import Image from '@/components/layouts/Image';
 import Head from 'next/head';
 import '@fontsource-variable/tourney';
 import Navbar from '@/components/layouts/Navbar';
