@@ -58,28 +58,4 @@ export const members = [
     legacy: 'true',
     status: 'Professor',
   },
-  {
-    name: 'Bereket Semagn',
-    cohort: 'Tunnel',
-    year: 2032,
-    siteURL: 'https://www.bereket.wtf',
-  },
-  {
-    name: 'Ankur Boyed',
-    cohort: 'Software Engineering',
-    year: 2029,
-    siteURL: 'https://www.ankurboyed.com',
-  },
-  {
-    name: 'Steven Gong',
-    cohort: 'Software Engineering',
-    year: 2026,
-    siteURL: 'https://stevengong.co',
-  },
-  {
-    name: 'Akshay Satish',
-    cohort: 'Computer Engineering',
-    year: 2028,
-    siteURL: 'https://akshaysatish.vercel.app/',
-  },
 ];

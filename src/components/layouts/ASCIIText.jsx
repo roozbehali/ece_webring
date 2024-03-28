@@ -1,10 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initialize size immediately
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+}
+
 const AsciiArtConverter = ({ imagePath }) => {
-  const MAXIMUM_WIDTH = 120;
-  const MAXIMUM_HEIGHT = 120;
+
+  const { width, height } = useWindowSize(); // Use custom hook for window size
+  const MAXIMUM_WIDTH = width * 0.15; // Adjusted for responsiveness
+  const MAXIMUM_HEIGHT = height * 0.075; // Adjusted for responsiveness
   const canvasRef = useRef(null);
   const [asciiArt, setAsciiArt] = useState('');
+  console.log(MAXIMUM_WIDTH, MAXIMUM_HEIGHT)
 
   const toGrayScale = (r, g, b) => 0.21 * r + 0.72 * g + 0.07 * b;
 
@@ -30,7 +54,7 @@ const AsciiArtConverter = ({ imagePath }) => {
       imageData.data[i] =
         imageData.data[i + 1] =
         imageData.data[i + 2] =
-          grayScale;
+        grayScale;
       grayScales.push(grayScale);
     }
 
@@ -41,6 +65,7 @@ const AsciiArtConverter = ({ imagePath }) => {
   const clampDimensions = (width, height) => {
     const ratio = getFontRatio();
     const rectifiedWidth = Math.floor(ratio * width);
+
     if (height > MAXIMUM_HEIGHT) {
       const reducedWidth = Math.floor(
         (rectifiedWidth * MAXIMUM_HEIGHT) / height
@@ -58,7 +83,7 @@ const AsciiArtConverter = ({ imagePath }) => {
 
   const getCharacterForGrayScale = (grayScale) => {
     const grayRamp =
-      '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
+      ' $@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'.';
     const rampLength = grayRamp.length;
     return grayRamp[Math.ceil(((rampLength - 1) * grayScale) / 255)];
   };
@@ -107,7 +132,7 @@ const AsciiArtConverter = ({ imagePath }) => {
     };
 
     processImage();
-  }, [imagePath]); // Effect runs whenever imagePath changes
+  }, [imagePath, MAXIMUM_WIDTH, MAXIMUM_HEIGHT]); // Effect runs whenever imagePath changes
 
   const letters = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
   let isAnimating = false;
@@ -137,20 +162,20 @@ const AsciiArtConverter = ({ imagePath }) => {
         clearInterval(interval);
         isAnimating = false;
       }
-    }, 35); // Decrease this to make it go faster
+    }, 15); // Decrease this to make it go faster
   };
 
   return (
-    <div className="text-[3px]">
+    <div className="text-[2px]">
       <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
-      <pre
+      <p
         onMouseOver={changeText}
-        className="text-right"
+        className="text-center whitespace-pre text-[clamp(1px,1vw,3px)]"
         style={{ textShadow: '#eab308 1px 0 1px' }}
         data-value={asciiArt}
       >
         {asciiArt}
-      </pre>
+      </p>
     </div>
   );
 };

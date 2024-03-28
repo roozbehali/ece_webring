@@ -8,22 +8,21 @@ const Image = () => {
   let firstName = memberItem.name.split(' ')[0].toLowerCase()
 
   return (
-    <div className="grid gap-4 p-8 font-mono text-white border-4 border-dotted rounded-lg lg:grid-cols-5 border-stone-600">
-      <div className='col-span-2'>
-        <p className="font-bold">{memberItem.name} </p>
-        <p>{memberItem.cohort}</p>
-        <p>{memberItem.year} </p>
-        {memberItem.legacy ?
-          <p>Legacy status:&nbsp;
-            <span className="text-yellow-700">{memberItem.status}</span>
-          </p>
-          : <></>
-        }
-      </div>
-      <div className='object-fill col-span-3'>
-      <AsciiArtConverter imagePath={`/people/${firstName}.jpg`} />
-
-      {/* <img src={`/people/${firstName}.jpg`} alt={''}></img> */}
+    <div className="min-w-[350px] max-w-[350px] min-h-[425px] flex flex-col items-center gap-4 px-4 pt-6 font-mono text-white border-2 border-dotted rounded-lg outline outline-2 outline-offset-8 outline-stone-500 outline-dashed border-stone-600">
+      <div className='px-4 pb-8 space-y-6'>
+        <AsciiArtConverter imagePath={`/people/${firstName}.png`} />
+        <div className=''>
+          <p className="font-bold">{memberItem.name} </p>
+          <p>{memberItem.cohort}</p>
+          <p>{memberItem.year} </p>
+          {memberItem.legacy ?
+            <p>Legacy status:&nbsp;
+              <span className="text-yellow-700">{memberItem.status}</span>
+            </p>
+            : <></>
+          }
+          <a href={memberItem.siteURL} target="_blank" className="font-mono text-white truncate hover:text-stone-300">{memberItem.siteURL}</a>
+        </div>
       </div>
     </div>
   )

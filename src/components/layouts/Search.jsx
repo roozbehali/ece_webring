@@ -49,7 +49,7 @@ const Search = () => {
       </div>
 
       {/* search results */}
-      <ul className="pl-6 space-y-2 overflow-y-scroll text-white h-[400px]">
+      <ul className="pl-6 pb-4 space-y-2 overflow-y-scroll text-white">
         {currMemberState.map((member, index) => {
           return (
             <div key={index} className="flex items-center">
