@@ -35,9 +35,9 @@ const Search = () => {
 
   return (
     // wrapper div
-    <section className="grid max-w-[600px] min-w-[300px] h-full space-y-4 pt-10">
+    <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4 pt-10">
       {/* search bar */}
-      <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px]">
+      <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px] min-w-full">
         <Input
           className="h-full peer"
           type="text"
@@ -50,7 +50,7 @@ const Search = () => {
       </div>
 
       {/* search results */}
-      <ul className="pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px]">
+      <ul className="pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full">
         {currMemberState.map((member, index) => {
           return (
             <div key={index} className="flex items-center">
