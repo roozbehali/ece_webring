@@ -1,20 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' });
-}
-
-/**
- * @typedef {Object} Person
- * @property {string} name
- * @property {"Computer" | "Electrical"} cohort
- * @property {number} year
- * @property {string} siteURL
- */
-
-/**
- * @type {Person}
- */
 export const members = [
   {
     name: 'Yash Karthik',
