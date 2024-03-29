@@ -18,7 +18,7 @@ Then, we will review your PR. If you've followed the above instructions, you'll 
 While we aren't following the "real" webring tradition of each site on the ring having links to the _previous_ and _next_ sites, we do want to have people visit this site and find others. Accordingly, we ask that everyone who makes a PR also add a backlink to [ece.engineering](https://ece.engineering/). You could do this either with the ECE logo, or simply with text (check out Yash's [website](https://www.yashkarthik.xyz/)).
 
 ### Built With
-* [![Next][Next.js]](https://nextjs.org/) | [![React][React.js]](https://react.dev/) | [![Tailwind][Tailwind]](https://tailwindcss.com/)
+[Next.js]](https://nextjs.org/) | [React.js]](https://react.dev/) | [Tailwind]](https://tailwindcss.com/)
 
 #### Acknowledgments
 Authored by [Roozbeh Ali](https://github.com/roozbehali), [Sunnie Kapar](https://github.com/sunniekapar), [Yashashwin Karthikeyan](https://github.com/YashKarthik), [Rahul Kumar](https://github.com/rahulbkumar), and [Adon Ojha](https://github.com/a4ojha). 
