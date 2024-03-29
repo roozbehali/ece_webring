@@ -18,7 +18,7 @@ export default function Home() {
         </Head>
         <Navbar />
 
-        <main className="flex justify-center flex-wrap gap-[100px] h-min !mt-18 gap-4">
+        <main className="flex flex-row justify-center gap-[100px] flex-wrap h-min !mt-18">
           <Search />
           <Image />
         </main>
