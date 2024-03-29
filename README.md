@@ -17,7 +17,7 @@ Then, we will review your PR. If you've followed the above instructions, you'll 
 
 ---
 ### Community
-While we aren't following the "real" webring tradition of each site on the ring having links to the _previous_ and _next_ sites, we do want to have people visit this site and find others. Accordingly, we ask that everyone who makes a PR also add a backlink to [ece.engineering](https://ece.engineering/). You could do this either with the ECE logo, or simply with text.
+While we aren't following the "real" webring tradition of each site on the ring having links to the _previous_ and _next_ sites, we do want to have people visit this site and find others. Accordingly, we ask that everyone who makes a PR also add a backlink to [ece.engineering](https://ece.engineering/). You could do this with either the ECE logo or plaintext.
 
 ---
 ### Built With
