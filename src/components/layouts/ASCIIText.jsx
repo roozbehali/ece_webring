@@ -162,7 +162,7 @@ const AsciiArtConverter = ({ imagePath }) => {
         clearInterval(interval);
         isAnimating = false;
       }
-    }, 15); // Decrease this to make it go faster
+    }, 25); // Decrease this to make it go faster
   };
 
   return (

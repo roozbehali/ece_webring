@@ -11,20 +11,19 @@ export default function Home() {
   return (
     <>
       <div className="inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]
-                      space-y-16 pt-12 px-16 min-h-screen min-w-screen bg-stone-900 flex flex-col items-center justify-between hover:cursor-cell">
+                      space-y-16 pt-12 px-16 min-h-screen min-w-screen bg-stone-900 flex flex-col justify-between hover:cursor-cell">
         <Head>
           <title>ECE Webring</title>
           <link rel="shortcut icon" href="/ece.ico"></link>
         </Head>
         <Navbar />
 
-        <main className="flex flex-wrap gap-24 h-min !mt-18 gap-4">
+        <main className="flex justify-center flex-wrap gap-[100px] h-min !mt-18 gap-4">
           <Search />
           <Image />
         </main>
 
         {/* Centered vs. left aligned */}
-        {/* <footer className="absolute bottom-0 left-0 flex items-center justify-center w-full h-10 font-mono bottom-4 text-neutral-300"> */}
         <footer className="flex justify-center h-10 font-mono text-white">
           <p>
             Made in&nbsp;
