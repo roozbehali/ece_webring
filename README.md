@@ -3,7 +3,7 @@
 <img alt="se-webring icon" src="https://github.com/roozbehali/ece_webring/blob/main/public/ece.ico" width="100" height="100">
 
 ### What is this?
-This is a _webring_ for current/prior **Electrical and Computer Engineering** students at the **University of Waterloo**. Webrings are a relic of the '90s, linking together related websites in order to increase traffic. This was SEO back in the day. No bots, no AI, just _people_, forming an online community. This website is clearly inspired by the [SE Webring](https://se-webring.xyz/), and the old ECE webring that is now inactive.
+This is a webring for current/prior **Electrical and Computer Engineering** students at the **University of Waterloo**. Webrings are a relic of the '90s, linking together related websites in order to increase traffic. This was SEO back in the day. No bots, no AI, just _people_, forming an online community. This website is clearly inspired by the [SE Webring](https://se-webring.xyz/), and the old ECE webring that is now inactive.
 
 ### How to join:
 If you'd like to add your website, you must be either a current [UW ECE](https://uwaterloo.ca/future-students/programs/computer-engineering) student, an alumni, or a professor in the faculty. We have a standard pipeline for PR's:
