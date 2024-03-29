@@ -42,20 +42,4 @@ export const members = [
     legacy: 'true',
     status: 'Professor',
   },
-  {
-    name: 'Douglas Wilhelm Harder',
-    cohort: 'Math',
-    year: null,
-    siteURL: 'https://ece.uwaterloo.ca/~dwharder/',
-    legacy: 'true',
-    status: 'Professor',
-  },
-  {
-    name: 'Hiren Patel',
-    cohort: 'ECE',
-    year: null,
-    siteURL: 'https://caesr.uwaterloo.ca/',
-    legacy: 'true',
-    status: 'Professor',
-  },
 ];
