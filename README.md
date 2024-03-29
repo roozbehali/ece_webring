@@ -25,6 +25,6 @@ While we aren't following the "real" webring tradition of each site on the ring 
 
 ---
 ### Acknowledgments
-Authored by [Roozbeh Ali](https://github.com/roozbehali), [Sunnie Kapar](https://github.com/sunniekapar), [Yashashwin Karthikeyan](https://github.com/YashKarthik), [Rahul Kumar](https://github.com/rahulbkumar), and [Adon Ojha](https://github.com/a4ojha). 
+Authored by [Roozbeh Ali](https://github.com/roozbehali), [Sunnie Kapar](https://github.com/sunniekapar), [Yash Karthik](https://github.com/YashKarthik), [Rahul Kumar](https://github.com/rahulbkumar), and [Adon Ojha](https://github.com/a4ojha). 
 
 We hope to maintain this as well as the SE webring is maintained, s/o [@simcard0000](https://github.com/simcard0000) 🚀
