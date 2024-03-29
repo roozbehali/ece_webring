@@ -42,4 +42,10 @@ export const members = [
     legacy: 'true',
     status: 'Professor',
   },
+  {
+    name: 'Nathan Kong',
+    cohort: 'Electrical Engineering',
+    year: 2028,
+    siteURL: 'https://carrizo93.github.io/',
+  },
 ];
