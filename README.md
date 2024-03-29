@@ -9,7 +9,7 @@ This is a webring for current/prior **Electrical and Computer Engineering** stud
 ### How to join:
 If you'd like to add your website, you must be either a current [UW ECE](https://uwaterloo.ca/future-students/programs/computer-engineering) student, an alumni, or a professor in the faculty. We have a standard pipeline for PR's:
 1. Pick an image you'd like to use. Take a look at our website; We use your image and "ASCII-ify" it for style points. Run your image through [remove.bg](https://www.remove.bg/), which will spit out a PNG of your image without a background.
-2. Add your image to `public\people`. Rename this image `[yourfirstname].png`, ensuring it is in lowercase.
+2. Add your image to `public\people`. Rename this image to `[yourfirstname].png`, ensuring it is in lowercase.
 3. Add your information to `src\pages\api\members.js`.
 4. Open a [pull request](src\pages\api\members.js) on this repository with your changes.
  
