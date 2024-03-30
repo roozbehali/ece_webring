@@ -171,7 +171,7 @@ const AsciiArtConverter = ({ imagePath }) => {
       <p
         onMouseOver={changeText}
         className="text-center whitespace-pre text-[clamp(1px,1vw,3px)]"
-        style={{ textShadow: '#eab308 1px 0 1px' }}
+        style={{ textShadow: '#ffd84a 1px 1px 3px' }}
         data-value={asciiArt}
       >
         {asciiArt}

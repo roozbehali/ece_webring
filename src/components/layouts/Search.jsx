@@ -33,6 +33,16 @@ const Search = () => {
 
   const { setMemberItem } = useMember();
 
+  const shortenURL = (url) => {
+    if (typeof url !== 'string') {
+      console.error('The provided URL is not a string:', url);
+      return '';
+    }
+    // This will remove the protocol (http, https) and the "www." subdomain if present
+    return url.replace(/(^\w+:|^)\/\/(www\.)?/, '');
+  };
+  
+
   return (
     // wrapper div
     <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4 pt-10">
@@ -67,7 +77,7 @@ const Search = () => {
                 &nbsp;|&nbsp;
                 <span className="text-yellow-500 underline transition duration-200 hover:text-yellow-600/40">
                   <a href={member.item.siteURL} target="_blank">
-                    {member.item.siteURL}
+                    {shortenURL(member.item.siteURL)}
                   </a>
                 </span>
                 &nbsp;{!member.item.legacy ? '|' : ''} {member.item.year}
