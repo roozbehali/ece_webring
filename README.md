@@ -1,6 +1,6 @@
 # ECE Webring
 
-<img alt="se-webring icon" src="https://github.com/roozbehali/ece_webring/blob/main/public/ece.ico" width="100" height="100">
+<img alt="se-webring icon" src="https://github.com/roozbehali/ece_webring/blob/main/public/ece_ascii.svg" width="100" height="100">
 
 ### What is this?
 This is a webring for current/prior **Electrical and Computer Engineering** students at the **University of Waterloo**. Webrings are a relic of the '90s, linking together related websites in order to increase traffic. This was SEO back in the day. No bots, no AI, just _people_, forming an online community. This website is clearly inspired by the [SE Webring](https://se-webring.xyz/), and the old ECE webring that is now inactive.
