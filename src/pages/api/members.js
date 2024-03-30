@@ -50,6 +50,18 @@ export const members = [
     siteURL: 'https://www.patrickhe.com',
   },
   {
+    name: 'Aryaman Singh',
+    cohort: 'Computer Engineering',
+    year: 2024,
+    siteURL: 'https://www.aryamans.me',
+  },
+  {
+    name: 'Tazik Shahjahan',
+    cohort: 'Computer Engineering',
+    year: 2024,
+    siteURL: 'https://tazik.sh',
+  },
+  {
     name: 'Mihir Seth',
     cohort: 'Computer Engineering',
     year: 2028,
