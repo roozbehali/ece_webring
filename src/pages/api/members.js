@@ -49,4 +49,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://www.patrickhe.com',
   },
+  {
+    name: 'Aryaman Singh',
+    cohort: 'Computer Engineering',
+    year: 2024,
+    siteURL: 'https://www.aryamans.me',
+  },
 ];
