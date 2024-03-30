@@ -31,4 +31,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://carrizo93.github.io/',
   },
+  {
+    name: 'Adon Ojha',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://www.adonojha.com',
+  },
 ];
