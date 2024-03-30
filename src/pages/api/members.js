@@ -55,4 +55,10 @@ export const members = [
     year: 2024,
     siteURL: 'https://www.aryamans.me',
   },
+  {
+    name: 'Tazik Shahjahan',
+    cohort: 'Computer Engineering',
+    year: 2024,
+    siteURL: 'https://tazik.sh',
+  },
 ];
