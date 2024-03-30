@@ -37,4 +37,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://www.adonojha.com',
   },
+  {
+    name: 'Patrick He',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://patrickhe.com',
+  },
 ];
