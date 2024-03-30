@@ -61,4 +61,10 @@ export const members = [
     year: 2024,
     siteURL: 'https://tazik.sh',
   },
+  {
+    name: 'Mihir Seth',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://mihirseth.github.io/mihir/',
+  },
 ];
