@@ -6,6 +6,7 @@ import AsciiArtConverter from './ASCIIText';
 const Image = () => {
   const { memberItem } = useMember();
   let firstName = memberItem.name.split(' ')[0].toLowerCase() // to get image
+  if (firstName === 'select') firstName = 'ece';
 
   const shortenURL = (url) => {
     if (typeof url !== 'string') {
@@ -17,8 +18,8 @@ const Image = () => {
   };
   
   return (
-    <div className="min-w-[350px] max-w-[350px] min-h-[425px] flex flex-col items-center gap-4 px-4 pt-6 font-mono text-white border-2 border-dotted rounded-lg outline outline-2 outline-offset-8 outline-stone-500 outline-dashed border-stone-600">
-      <div className='px-4 pb-8 space-y-6'>
+    <div className="relative portrait z-10 overflow-clip min-w-[350px] max-w-[350px] min-h-[425px] flex flex-col items-center gap-4 px-4 pt-6 font-mono text-white border-2 border-dotted rounded-lg outline-2 outline-offset-8 outline-stone-500 outline-dashed border-stone-600">
+      <div className='px-4 pb-8 space-y-6 '>
         <AsciiArtConverter imagePath={`/people/${firstName}.png`} />
         <div className="text-center">
           <p className="font-bold">{memberItem.name} </p>

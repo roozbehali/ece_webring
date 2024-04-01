@@ -41,11 +41,10 @@ const Search = () => {
     // This will remove the protocol (http, https) and the "www." subdomain if present
     return url.replace(/(^\w+:|^)\/\/(www\.)?/, '');
   };
-  
 
   return (
     // wrapper div
-    <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4 pt-10">
+    <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4">
       {/* search bar */}
       <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px] min-w-full">
         <Input
@@ -69,18 +68,24 @@ const Search = () => {
               <li
                 onPointerOver={() => setMemberItem(member.item)}
                 key={index}
-                className="px-6 py-2.5 font-mono text-sm border-2 border-dotted border-stone-600 hover:bg-stone-800 hover:cursor-crosshair w-full truncate"
+                className="shadow-lg px-6 py-2.5 backdrop-blur-3xl bg-stone-800/20 font-mono text-sm border-2 border-dotted border-stone-600 hover:bg-stone-800/80 hover:cursor-crosshair w-full truncate transition duration-100"
               >
+                {/* Name */}
                 <span className={member.item.legacy ? 'text-yellow-700' : ''}>
                   {member.item.name}
                 </span>
-                &nbsp;|&nbsp;
+                &nbsp;|
+                {/* Website link */}
+                &nbsp;
                 <span className="text-yellow-500 underline transition duration-200 hover:text-yellow-600/40">
                   <a href={member.item.siteURL} target="_blank">
                     {shortenURL(member.item.siteURL)}
                   </a>
                 </span>
-                &nbsp;{!member.item.legacy ? '|' : ''} {member.item.year}
+                {/* Year */}
+                &nbsp;{!member.item.legacy ? '|' : ' '}
+                &nbsp;
+                <span className="opacity-60">{member.item.year}</span>
               </li>
             </div>
           );
