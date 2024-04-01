@@ -67,4 +67,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://mihirseth.github.io/mihir/',
   },
+  {
+    name: 'Guhan Iyer',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://guhaniyer.com/',
+  },
 ];
