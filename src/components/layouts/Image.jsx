@@ -6,7 +6,7 @@ import AsciiArtConverter from './ASCIIText';
 const Image = () => {
   const { memberItem } = useMember();
   let firstName = memberItem.name.split(' ')[0].toLowerCase() // to get image
-  if (firstName === 'select') firstName = 'ece';
+  // if (firstName === 'select') firstName = 'ece';
 
   const shortenURL = (url) => {
     if (typeof url !== 'string') {
