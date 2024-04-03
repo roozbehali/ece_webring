@@ -68,6 +68,12 @@ export const members = [
     siteURL: 'https://mihirseth.github.io/mihir/',
   },
   {
+    name: 'Akira Yoshiyama',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://ece.uwaterloo.ca/~agyoshiy/',
+  },
+  {
     name: 'Guhan Iyer',
     cohort: 'Computer Engineering',
     year: 2028,
