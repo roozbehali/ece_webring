@@ -65,7 +65,7 @@ export const members = [
     name: 'Mihir Seth',
     cohort: 'Computer Engineering',
     year: 2028,
-    siteURL: 'https://mihirseth.github.io/mihir/',
+    siteURL: 'https://www.mihirseth.com',
   },
   {
     name: 'Akira Yoshiyama',
