@@ -11,7 +11,7 @@ If you'd like to add your website, you must be either a current [UW ECE](https:/
 1. Pick an image you'd like to use. Take a look at our website; We use your image and "ASCII-ify" it for style points. Run your image through [remove.bg](https://www.remove.bg/), which will spit out a PNG of your image without a background.
 2. Add your image to `public\people`. Rename this image to `[yourfirstname].png`, ensuring it is in lowercase.
 3. Add your information to `src\pages\api\members.js`.
-4. Open a [pull request](src\pages\api\members.js) on this repository with your changes.
+4. Open a [pull request](https://github.com/roozbehali/ece_webring/pulls) on this repository with your changes.
  
 Then, we will review your PR. If you've followed the above instructions, you'll show up on the website! 🧙🏻
 
