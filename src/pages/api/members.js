@@ -85,4 +85,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://rongbin99.github.io/',
   },
+  {
+    name: 'David Wang',
+    cohort: 'Computer Engineering',
+    year: 2024,
+    siteURL: 'https://enjineerman.github.io/',
+  },
 ];
