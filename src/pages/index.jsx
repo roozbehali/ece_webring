@@ -10,15 +10,20 @@ const source_code_pro = Source_Code_Pro({ subsets: ['latin'] });
 export default function Home() {
   return (
     <>
-      <div className="inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]
-                      space-y-16 pt-12 px-16 min-h-screen min-w-screen bg-stone-900 flex flex-col justify-between hover:cursor-cell">
+      <div
+        className="inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]
+                      space-y-16 pt-12 px-4 md:px-16 min-h-screen min-w-screen bg-stone-900 flex flex-col justify-between hover:cursor-cell"
+      >
         <Head>
           <title>ECE Webring</title>
           <link rel="shortcut icon" href="/ece_ascii.svg"></link>
         </Head>
         <Navbar />
 
-        <main className="flex flex-row justify-center gap-[100px] flex-wrap h-min !mt-18">
+        <main
+          className="flex items-center flex-col justify-center gap-[100px] h-min !mt-18 
+                     lg:items-start lg:flex-row "
+        >
           <Search />
           <Image />
         </main>

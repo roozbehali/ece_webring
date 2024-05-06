@@ -17,10 +17,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex flex-row justify-start">
+    <nav className="flex flex-row justify-center lg:justify-start">
       <p
         onMouseOver={changeText}
-        className="font-mono text-4xl font-bold text-white"
+        className="font-mono text-4xl font-bold text-center text-secondary"
         data-value="ECE WEBRING"
       >
         ECE WEBRING

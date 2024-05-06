@@ -13,9 +13,9 @@ function useWindowSize() {
         height: window.innerHeight,
       });
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize(); // Initialize size immediately
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return windowSize;
@@ -28,7 +28,6 @@ const AsciiArtConverter = ({ imagePath }) => {
   const MAXIMUM_HEIGHT = height * 0.075; // Adjusted for responsiveness
   const canvasRef = useRef(null);
   const [asciiArt, setAsciiArt] = useState('');
-  console.log(MAXIMUM_WIDTH, MAXIMUM_HEIGHT)
 
   const toGrayScale = (r, g, b) => 0.21 * r + 0.72 * g + 0.07 * b;
 
@@ -54,7 +53,7 @@ const AsciiArtConverter = ({ imagePath }) => {
       imageData.data[i] =
         imageData.data[i + 1] =
         imageData.data[i + 2] =
-        grayScale;
+          grayScale;
       grayScales.push(grayScale);
     }
 
@@ -134,7 +133,8 @@ const AsciiArtConverter = ({ imagePath }) => {
     processImage();
   }, [imagePath, MAXIMUM_WIDTH, MAXIMUM_HEIGHT]); // Effect runs whenever imagePath changes
 
-  const letters = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
+  const letters =
+    ' $@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'.';
   let isAnimating = false;
   const changeText = (event) => {
     if (isAnimating) return;
@@ -156,13 +156,13 @@ const AsciiArtConverter = ({ imagePath }) => {
       }
 
       event.target.innerText = newText.join('');
-      iterations += 250;
+      iterations += 200;
       //iterations += Math.floor(Math.random() * 1000); // Increase this to change more characters at a time
       if (iterations >= originalText.length) {
         clearInterval(interval);
         isAnimating = false;
       }
-    }, 25); // Decrease this to make it go faster
+    }, 20); // Decrease this to make it go faster
   };
 
   return (
