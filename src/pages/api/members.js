@@ -9,7 +9,7 @@ export const members = [
     name: 'Roozbeh Ali',
     cohort: 'Computer Engineering',
     year: 2028,
-    siteURL: 'https://www.roozbehali.com',
+    siteURL: 'https://www.roozbehali.me',
   },
   {
     name: 'Sunnie Kapar',
