@@ -59,7 +59,7 @@ export const members = [
     name: 'Brayden Zhong',
     cohort: 'Electrical Engineering',
     year: 2029,
-    siteURL: 'https://www.b8zhong.github.io/',
+    siteURL: 'https://b8zhong.github.io/site/',
   },
   {
     name: 'Tazik Shahjahan',
