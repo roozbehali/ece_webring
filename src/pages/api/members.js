@@ -56,6 +56,12 @@ export const members = [
     siteURL: 'https://www.aryamans.me',
   },
   {
+    name: 'Brayden Zhong',
+    cohort: 'Electrical Engineering',
+    year: 2029,
+    siteURL: 'https://b8zhong.github.io/site/',
+  },
+  {
     name: 'Tazik Shahjahan',
     cohort: 'Computer Engineering',
     year: 2024,
