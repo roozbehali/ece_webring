@@ -97,4 +97,10 @@ export const members = [
     year: 2024,
     siteURL: 'https://enjineerman.github.io/',
   },
+  {
+    name: 'Daivik Goel',
+    cohort: 'Computer Engineering',
+    year: 2022,
+    siteURL: 'https://daivikgoel.com/',
+  },
 ];
