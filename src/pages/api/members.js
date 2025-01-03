@@ -1,15 +1,15 @@
 export const members = [
   {
+    name: 'Roozbeh Ali',
+    cohort: 'Computer Engineering',
+    year: 2029,
+    siteURL: 'https://www.roozbehali.com',
+  },
+  {
     name: 'Yash Karthik',
     cohort: 'Computer Engineering',
     year: 2028,
     siteURL: 'https://www.yashkarthik.xyz',
-  },
-  {
-    name: 'Roozbeh Ali',
-    cohort: 'Computer Engineering',
-    year: 2028,
-    siteURL: 'https://www.roozbehali.me',
   },
   {
     name: 'Sunnie Kapar',
@@ -29,7 +29,7 @@ export const members = [
     name: 'Nathan Kong',
     cohort: 'Electrical Engineering',
     year: 2028,
-    siteURL: 'https://carrizo93.github.io/',
+    siteURL: 'https://carrizo93.github.io',
   },
   {
     name: 'Adon Ojha',
@@ -83,24 +83,24 @@ export const members = [
     name: 'Guhan Iyer',
     cohort: 'Computer Engineering',
     year: 2028,
-    siteURL: 'https://guhaniyer.com/',
-  },
-  {
-    name: 'Rongbin Gu',
-    cohort: 'Computer Engineering',
-    year: 2028,
-    siteURL: 'https://rongbin99.github.io/',
+    siteURL: 'https://guhaniyer.com',
   },
   {
     name: 'David Wang',
     cohort: 'Computer Engineering',
     year: 2024,
-    siteURL: 'https://enjineerman.github.io/',
+    siteURL: 'https://enjineerman.github.io',
   },
   {
     name: 'Daivik Goel',
     cohort: 'Computer Engineering',
     year: 2022,
-    siteURL: 'https://daivikgoel.com/',
+    siteURL: 'https://daivikgoel.com',
+  },
+  {
+    name: 'Rongbin Gu',
+    cohort: 'Computer Engineering',
+    year: 2028,
+    siteURL: 'https://rongbin99.github.io',
   },
 ];

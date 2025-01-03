@@ -20,6 +20,7 @@ export default function Navbar() {
     <nav className="flex flex-row justify-start">
       <p
         onMouseOver={changeText}
+        onFocus={changeText}
         className="font-mono text-4xl font-bold text-white"
         data-value="ECE WEBRING"
       >

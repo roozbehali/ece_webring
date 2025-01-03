@@ -22,13 +22,27 @@ function useWindowSize() {
 }
 
 const AsciiArtConverter = ({ imagePath }) => {
+  const { width: windowWidth, height: windowHeight } = useWindowSize();
+  const [dimensions, setDimensions] = useState({
+    maxWidth: 0,
+    maxHeight: 0
+  });
+  
+  // Calculate dimensions after window size is available
+  useEffect(() => {
+    if (windowWidth && windowHeight) {
+      setDimensions({
+        maxWidth: windowWidth * 0.125,
+        maxHeight: windowHeight * 0.0625
+      });
+    }
+  }, [windowWidth, windowHeight]);
 
   const { width, height } = useWindowSize(); // Use custom hook for window size
-  const MAXIMUM_WIDTH = width * 0.15; // Adjusted for responsiveness
-  const MAXIMUM_HEIGHT = height * 0.075; // Adjusted for responsiveness
+  const MAXIMUM_WIDTH = width * 0.125; // Adjusted for responsiveness
+  const MAXIMUM_HEIGHT = height * 0.0625; // Adjusted for responsiveness
   const canvasRef = useRef(null);
   const [asciiArt, setAsciiArt] = useState('');
-  console.log(MAXIMUM_WIDTH, MAXIMUM_HEIGHT)
 
   const toGrayScale = (r, g, b) => 0.21 * r + 0.72 * g + 0.07 * b;
 
@@ -100,9 +114,10 @@ const AsciiArtConverter = ({ imagePath }) => {
     setAsciiArt(asciiImage);
   };
 
+  // Only process image when dimensions are properly set
   useEffect(() => {
-    if (!imagePath) return;
-
+    if (!imagePath || !dimensions.maxWidth || !dimensions.maxHeight) return;
+    
     const loadImage = (src) => {
       return new Promise((resolve, reject) => {
         const image = new Image();
@@ -132,7 +147,7 @@ const AsciiArtConverter = ({ imagePath }) => {
     };
 
     processImage();
-  }, [imagePath, MAXIMUM_WIDTH, MAXIMUM_HEIGHT]); // Effect runs whenever imagePath changes
+  }, [imagePath, dimensions.maxWidth, dimensions.maxHeight]);
 
   const letters = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
   let isAnimating = false;
@@ -157,19 +172,19 @@ const AsciiArtConverter = ({ imagePath }) => {
 
       event.target.innerText = newText.join('');
       iterations += 250;
-      //iterations += Math.floor(Math.random() * 1000); // Increase this to change more characters at a time
       if (iterations >= originalText.length) {
         clearInterval(interval);
         isAnimating = false;
       }
-    }, 25); // Decrease this to make it go faster
+    }, 25);
   };
 
   return (
     <div className="text-[2px]">
-      <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
+      <canvas ref={canvasRef} style={{ display: 'none' }} />
       <p
         onMouseOver={changeText}
+        onFocus={changeText}
         className="text-center whitespace-pre text-[clamp(1px,1vw,3px)]"
         style={{ textShadow: '#ffd84a 1px 1px 3px' }}
         data-value={asciiArt}
