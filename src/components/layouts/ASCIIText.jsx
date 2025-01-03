@@ -27,20 +27,29 @@ const AsciiArtConverter = ({ imagePath }) => {
     maxWidth: 0,
     maxHeight: 0
   });
+
+  let scaleFactor;
+  if (windowWidth > 1920) {
+    scaleFactor = 0.1;
+  } else if (windowWidth < 768) {
+    scaleFactor = 0.15;
+  } else {
+    scaleFactor = 0.125;
+  }
   
   // Calculate dimensions after window size is available
   useEffect(() => {
     if (windowWidth && windowHeight) {
       setDimensions({
-        maxWidth: windowWidth * 0.125,
-        maxHeight: windowHeight * 0.0625
+        maxWidth: windowWidth * scaleFactor,
+        maxHeight: windowHeight * (scaleFactor / 2) // Maintain aspect ratio
       });
     }
-  }, [windowWidth, windowHeight]);
+  }, [windowWidth, windowHeight, scaleFactor]);
 
-  const { width, height } = useWindowSize(); // Use custom hook for window size
-  const MAXIMUM_WIDTH = width * 0.125; // Adjusted for responsiveness
-  const MAXIMUM_HEIGHT = height * 0.0625; // Adjusted for responsiveness
+  const { width, height } = useWindowSize();
+  const MAXIMUM_WIDTH = width * scaleFactor;
+  const MAXIMUM_HEIGHT = height * (scaleFactor / 2);
   const canvasRef = useRef(null);
   const [asciiArt, setAsciiArt] = useState('');
 
