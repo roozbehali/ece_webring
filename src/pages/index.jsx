@@ -11,8 +11,8 @@ export default function Home() {
                       space-y-16 pt-12 px-16 min-h-screen min-w-screen bg-stone-900 flex flex-col justify-between hover:cursor-cell">
         <Head>
           <title>ECE Webring</title>
-          <link rel="shortcut icon" href="/ece_ascii.svg" />
         </Head>
+        
         <Navbar />
 
         <main className="flex flex-row justify-center gap-[100px] flex-wrap h-min !mt-18">
