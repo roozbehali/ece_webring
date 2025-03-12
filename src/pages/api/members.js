@@ -1,5 +1,11 @@
 export const members = [
   {
+    name: 'Matthew Chen',
+    cohort: 'Electrical Engineering',
+    year: 2029,
+    siteURL: 'https://www.matthewchen.co',
+  },
+  {
     name: 'Roozbeh Ali',
     cohort: 'Computer Engineering',
     year: 2029,
