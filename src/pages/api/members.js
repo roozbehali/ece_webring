@@ -103,4 +103,10 @@ export const members = [
     year: 2028,
     siteURL: 'https://rongbin99.github.io',
   },
+    {
+    name: 'Matthew Chen',
+    cohort: 'Electrical Engineering',
+    year: 2029,
+    siteURL: 'https://matthewchen.co',
+  },
 ];
