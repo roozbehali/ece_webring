@@ -1,10 +1,10 @@
 export const members = [
-	{
-		name: 'Kevin Zhang',
-		cohort: 'Computer Engineering',
-		year: 2026,
-		siteURL: 'https://www.kevinistaking.pictures',
-	},
+  {
+    name: 'Kevin Zhang',
+    cohort: 'Computer Engineering',
+    year: 2026,
+    siteURL: 'https://www.kevinistaking.pictures',
+  },
   {
     name: 'Roozbeh Ali',
     cohort: 'Computer Engineering',
