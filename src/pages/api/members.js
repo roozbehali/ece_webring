@@ -109,4 +109,10 @@ export const members = [
     year: 2029,
     siteURL: 'https://matthewchen.co',
   },
+  {
+    name: 'Kevin Zhang',
+    cohort: 'Computer Engineering',
+    year: 2026,
+    siteURL: 'https://www.kevinistaking.pictures',
+  },
 ];
