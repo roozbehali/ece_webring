@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { members } from '@/pages/api/members';
 import Fuse from 'fuse.js';
@@ -18,12 +18,31 @@ const Search = () => {
   const [currMemberState, setCurrMemberState] = useState(
     members.map(member => ({ item: member }))
   );
+  
+  // State to track if we've scrolled to bottom
+  const [isAtBottom, setIsAtBottom] = useState(false);
+  const listRef = useRef(null);
+
+  // Handle scroll events on the list
+  const handleScroll = () => {
+    if (listRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = listRef.current;
+      // Check if we're near the bottom (within 20px)
+      const isNearBottom = scrollTop + clientHeight >= scrollHeight - 20;
+      setIsAtBottom(isNearBottom);
+    }
+  };
 
   const handleSearch = (e) => {
     if (!e.target.value) {
       setCurrMemberState(members.map(member => ({ item: member })));
     } else {
       setCurrMemberState(fuse.search(e.target.value));
+    }
+    // Reset scroll position and bottom state when search changes
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+      setIsAtBottom(false);
     }
   };
 
@@ -53,7 +72,11 @@ const Search = () => {
       </div>
 
       {/* search results */}
-      <ul className="pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full">
+      <ul 
+        ref={listRef}
+        onScroll={handleScroll}
+        className={`pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full ${isAtBottom ? 'scroll-at-bottom' : ''}`}
+      >
         {currMemberState.map((member, index) => {
           return (
             <div key={member.item.name} className="flex items-center">

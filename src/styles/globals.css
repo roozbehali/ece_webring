@@ -94,6 +94,21 @@
     
     -webkit-mask: var(--mask); 
     mask: var(--mask);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: -webkit-mask-size 0.3s ease, mask-size 0.3s ease;
+  }
+
+  ul.scroll-at-bottom {
+    --mask: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,   /* Start fully transparent */
+        rgba(0,0,0,1) 0%,  /* Transition to fully opaque */
+        rgba(0,0,0,1) 100%  /* Stay opaque all the way to the bottom */
+    );
+    
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
 
   ::selection {
