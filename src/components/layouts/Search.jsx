@@ -21,17 +21,20 @@ const Search = () => {
   );
   
   // State to track scroll position
-  const [isAtBottom, setIsAtBottom] = useState(false);
-  const [isAtTop, setIsAtTop] = useState(true); // we start at top
+  const [scrollState, setScrollState] = useState({ isAtTop: true, isAtBottom: false });
   const listRef = useRef(null);
 
   // Handle scroll events on the list
   const handleScroll = () => {
+    const scrollBuffer = 2; // account for rounding errors in browser
+
     if (listRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = listRef.current;
 
-      setIsAtBottom(scrollTop + clientHeight >= scrollHeight);
-      setIsAtTop(scrollTop < 1);
+      setScrollState({
+        isAtTop: scrollTop < scrollBuffer,
+        isAtBottom: scrollTop + clientHeight >= scrollHeight - scrollBuffer,
+      });
     }
   };
 
@@ -44,8 +47,7 @@ const Search = () => {
     // Reset scroll position and state when search changes
     if (listRef.current) {
       listRef.current.scrollTop = 0;
-      setIsAtBottom(false);
-      setIsAtTop(true);
+      setScrollState({ isAtTop: true, isAtBottom: false });
     }
   };
 
@@ -80,8 +82,8 @@ const Search = () => {
         onScroll={handleScroll}
         className={clsx(
           'pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full',
-          isAtBottom && 'scroll-at-bottom',
-          !isAtTop && 'scroll-not-at-top'
+          scrollState.isAtBottom && 'scroll-at-bottom',
+          !scrollState.isAtTop && 'scroll-not-at-top'
         )}
       >
         {currMemberState.map((member, index) => {
