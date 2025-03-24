@@ -1,9 +1,10 @@
 import React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { members } from '@/pages/api/members';
 import Fuse from 'fuse.js';
 import { useMember } from '@/context/MemberContext';
+import clsx from 'clsx';
 
 const Search = () => {
   // Fuse.js for search
@@ -19,17 +20,18 @@ const Search = () => {
     members.map(member => ({ item: member }))
   );
   
-  // State to track if we've scrolled to bottom
+  // State to track scroll position
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true); // we start at top
   const listRef = useRef(null);
 
   // Handle scroll events on the list
   const handleScroll = () => {
     if (listRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = listRef.current;
-      // Check if we're near the bottom (within 20px)
-      const isNearBottom = scrollTop + clientHeight >= scrollHeight - 20;
-      setIsAtBottom(isNearBottom);
+
+      setIsAtBottom(scrollTop + clientHeight >= scrollHeight);
+      setIsAtTop(scrollTop < 1);
     }
   };
 
@@ -39,10 +41,11 @@ const Search = () => {
     } else {
       setCurrMemberState(fuse.search(e.target.value));
     }
-    // Reset scroll position and bottom state when search changes
+    // Reset scroll position and state when search changes
     if (listRef.current) {
       listRef.current.scrollTop = 0;
       setIsAtBottom(false);
+      setIsAtTop(true);
     }
   };
 
@@ -57,7 +60,7 @@ const Search = () => {
   };
 
   return (
-    <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4 pt-10">
+    <section className="grid max-w-[600px] min-w-[300px] min-h-full w-full space-y-4 pt-10">
       {/* search bar */}
       <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px] min-w-full">
         <Input
@@ -75,7 +78,11 @@ const Search = () => {
       <ul 
         ref={listRef}
         onScroll={handleScroll}
-        className={`pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full ${isAtBottom ? 'scroll-at-bottom' : ''}`}
+        className={clsx(
+          'pl-6 pb-4 space-y-2 overflow-y-scroll text-white max-h-[300px] min-w-full',
+          isAtBottom && 'scroll-at-bottom',
+          !isAtTop && 'scroll-not-at-top'
+        )}
       >
         {currMemberState.map((member, index) => {
           return (

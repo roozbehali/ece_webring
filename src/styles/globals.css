@@ -84,31 +84,31 @@
 
 @layer utilities {
   ul {
-    --mask: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%,   /* Start fully transparent */
-        rgba(0,0,0,1) 0%,  /* Transition to fully opaque */
-        rgba(0,0,0,1) 70%,  /* Stay opaque */
-        rgba(0,0,0,0) 100%  /* End fully transparent */
-    );
-    
-    -webkit-mask: var(--mask); 
-    mask: var(--mask);
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    transition: -webkit-mask-size 0.3s ease, mask-size 0.3s ease;
-  }
+    --fade-opacity-start: 0;
+    --fade-opacity-end: 1;
+    --fade-top: var(--fade-opacity-end); /* start with no top fade */
+    --fade-bottom: var(--fade-opacity-start); /* start with fade on bottom */
+    --fade-intensity: 15%; /* intensity of the gradient */
 
-  ul.scroll-at-bottom {
     --mask: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%,   /* Start fully transparent */
-        rgba(0,0,0,1) 0%,  /* Transition to fully opaque */
-        rgba(0,0,0,1) 100%  /* Stay opaque all the way to the bottom */
+      rgba(0,0,0,var(--fade-top)) 0%,
+      rgba(0,0,0,var(--fade-opacity-end)) var(--fade-intensity),
+      rgba(0,0,0,var(--fade-opacity-end)) calc(100% - var(--fade-intensity)),
+      rgba(0,0,0,var(--fade-bottom)) 100%
     );
-    
+
     -webkit-mask: var(--mask);
     mask: var(--mask);
+  }
+
+  /* add top fade when not at top */
+  ul.scroll-not-at-top {
+    --fade-top: var(--fade-opacity-start);
+  }
+  
+  /* remove bottom fade when at bottom */
+  ul.scroll-at-bottom {
+    --fade-bottom: var(--fade-opacity-end);
   }
 
   ::selection {
