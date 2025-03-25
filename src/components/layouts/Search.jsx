@@ -62,7 +62,7 @@ const Search = () => {
   };
 
   return (
-    <section className="grid max-w-[600px] min-w-[300px] min-h-full w-full space-y-4 pt-10">
+    <section className="grid max-w-[600px] min-w-[300px] h-full w-full space-y-4 pt-10">
       {/* search bar */}
       <div className="flex flex-row-reverse items-stretch font-mono text-lg text-secondary max-h-[44px] min-w-full">
         <Input
