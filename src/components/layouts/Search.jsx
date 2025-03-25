@@ -86,26 +86,25 @@ const Search = () => {
           !scrollState.isAtTop && 'scroll-not-at-top'
         )}
       >
-        {currMemberState.map((member, index) => {
+        {currMemberState.map((member, _index) => {
           return (
             <div key={member.item.name} className="flex items-center">
               <span className="pr-8 text-yellow-500">&gt;</span>
-
               <li
                 onPointerOver={() => setMemberItem(member.item)}
                 key={member.item.name}
                 className="px-6 py-2.5 font-mono text-sm border-2 border-dotted border-stone-600 hover:bg-stone-800 hover:cursor-crosshair w-full truncate"
               >
-                <span className={member.item.legacy ? 'text-yellow-700' : ''}>
+                <span className={member.item.legacy && 'text-yellow-700'}>
                   {member.item.name}
                 </span>
-                &nbsp;|&nbsp;
+                {' | '}
                 <span className="text-yellow-500 underline transition duration-200 hover:text-yellow-600/40">
                   <a href={member.item.siteURL} target="_blank" rel="noreferrer">
                     {shortenURL(member.item.siteURL)}
                   </a>
                 </span>
-                &nbsp;{!member.item.legacy ? '|' : ''} {member.item.year}
+                &nbsp;{!member.item.legacy && '|'} {member.item.year}
               </li>
             </div>
           );
