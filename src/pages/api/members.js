@@ -115,4 +115,10 @@ export const members = [
     year: 2026,
     siteURL: 'https://www.kevinistaking.pictures',
   },
+  {
+    name: 'Harsukrit Pall',
+    cohort: 'Computer Engineering',
+    year: 2029,
+    siteURL: 'https://www.pall.dev',
+  },
 ];
